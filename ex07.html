@@ -4,9 +4,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Somado Números</title>
+
+    <style>
+        body{ 
+            text-align: center;
+            font: normal 18pt Arial;
+        }
+        input {
+            width: 150px;
+            font: normal 18pt Arial;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+        div#resul{
+            margin-top: 20px;
+        }
+
+    </style>
+
 </head>
 <body>
+    <h1>Somando Valores</h1> <!--SOMA-->
+        <input type="number" name= "textn1" id="textn1"> +
+        <input type="number" name="textn2" id="textn2">
+    <input type="button" value="somar" onclick="somar()">
+    <div id="res">Resultado</div>
+
+    <h1>Multiplicando</h1> <!--DIVISÃO-->
+        <input type="number" name="divi1" id="divi1"> x
+        <input type="number" name="divi2" id="divi2">
+    <input type="button" value="divisao" onclick="Divisao()" > 
+    <div id="resul">Resultado</div>
+
+    <script> 
+        function somar() { //SOMA
+        var tn1 = window.document.getElementById("textn1")
+        var tn2 = window.document.getElementById('textn2')
+        var res = window.document.querySelector("div#res")
+
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var s = n1 + n2 
+        res.innerHTML = `A soma entre ${n1} e ${n2}  é igual a <strong> ${s} </strong>`
+        } //SOMA
+
+        function divisao () {
+            var dv1 = window.document.getElementById("divi1")
+            var dv2 = window.document.getElementById("divi2")
+            var resul = window.document.querySelector("div#resul")
+
+            var d1 = Number(dv1.value)
+            var d2 = Number(dv2.value)
+            var d = d1 * d2
+            resul.innerHTML = `A divisão entre ${d1} e ${d2} é igual a <strong> ${d} </strong>`
+        }
+    </script>
     
 </body>
 </html>

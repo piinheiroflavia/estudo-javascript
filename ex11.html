@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+
+    <style>
+        main{
+            width: 800px;
+            height: 500px;
+            background-color: grey;
+            text-align: center;
+            margin: auto;
+            font: normal 1.2rem Arial;
+        }
+        input{
+            width: 300px;
+        }
+        input#btn{
+            width: 100px;
+            font: normal 1.1rem Ariel;
+            height: 40px;
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+<body>
+    <main>
+        <h1>Nacionalidade</h1>
+        Qual sua nacionalidade? É Brasileiro ou Estrangeiro? Digite o nome do seu país. <br> <input type="text" name="país" id="país"> <br>
+         <input type="button" value="Verficiar" id="btn" onclick="analisar()">
+         <div id="res"></div>
+    </main>
+
+    <script>
+        function analisar(){// nome do evento/bloco
+            var ps = window.document.querySelector("input#país")
+            var res = window.document.querySelector("div#res")
+            var país1 = String(ps.value)//value serve tb para string
+
+            res.innerHTML= `<p>Você é do país ${país1}, então você é..</p>`
+
+            if (ps == 'Brasil'){ //ps precisa ser igual a Brasil, no js rodou tb != 
+                res.innerHTML += "<p><strong>Brasileiro!!</strong></p>"
+            }else{ // += concatenação
+                res.innerHTML += "<p><strong> estrageiro </strong></p>"
+            }
+        }
+    </script>
+</body>
+</html>
