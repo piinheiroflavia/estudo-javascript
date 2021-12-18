@@ -14,13 +14,15 @@
             text-align: center;
             margin: auto;
             font: normal 1.2rem Arial;
+            text-transform: uppercase;
         }
         input{
             width: 300px;
+            text-transform: uppercase;
         }
         input#btn{
             width: 100px;
-            font: normal 1.1rem Ariel;
+            font: normal 0.8rem Ariel;
             height: 40px;
             border-radius: 10px;
         }
@@ -30,7 +32,7 @@
 <body>
     <main>
         <h1>Nacionalidade</h1>
-        Qual sua nacionalidade? É Brasileiro ou Estrangeiro? Digite o nome do seu país. <br> <input type="text" name="país" id="país"> <br>
+        Qual sua nacionalidade? É Brasileiro ou Estrangeiro? Digite o nome do seu país. <br> <input type="text" name="país"  id="país"> <br>
          <input type="button" value="Verficiar" id="btn" onclick="analisar()">
          <div id="res"></div>
     </main>
@@ -43,7 +45,7 @@
 
             res.innerHTML= `<p>Você é do país ${país1}, então você é..</p>`
 
-            if (ps == 'Brasil'){ //ps precisa ser igual a Brasil, no js rodou tb != 
+            if (país1 == 'brasil'){ //ps precisa ser igual a Brasil, no js rodou tb != 
                 res.innerHTML += "<p><strong>Brasileiro!!</strong></p>"
             }else{ // += concatenação
                 res.innerHTML += "<p><strong> estrageiro </strong></p>"
