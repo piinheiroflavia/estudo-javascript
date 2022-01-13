@@ -1,0 +1,31 @@
+@charset 'UTF-8';
+
+body{
+    background-color: black;
+    font: normal 1.5rem Arial;
+}
+
+header{
+    color:#ed1d8583;
+    text-align: center;
+}
+section{
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    width: 400px;
+    margin: auto;
+    border: 0.5px solid #FF007F;
+    box-shadow: 0px 0px 45px #ff008083
+}
+div #seltab {
+    margin: auto;
+    width: 200px;
+    margin: 20px 100px 0px ;
+}
+footer{
+    text-align: center;
+    color: #fff;
+    margin: 55px;
+    font-size: 0.7rem;
+}
